@@ -26,7 +26,7 @@
 
 	<header id="masthead" class="site-header">
 
-		<div class="top-header-contain">
+		<div class="top-header-contain desktop-navigation">
 			<div class="wrapper">
 				<?php if ( has_nav_menu( 'secondary-menu' ) ) : ?>
 					<nav class="secondary-menu" aria-label="<?php esc_attr_e( 'Secondary Menu', 'newspack' ); ?>">
@@ -82,12 +82,11 @@
 				<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
 
 				<?php if ( has_nav_menu( 'tertiary-menu' ) ) : ?>
-					<nav class="tertiary-menu" aria-label="<?php esc_attr_e( 'Tertiary Menu', 'newspack' ); ?>">
+					<nav class="tertiary-menu desktop-navigation" aria-label="<?php esc_attr_e( 'Tertiary Menu', 'newspack' ); ?>">
 						<?php
 						wp_nav_menu(
 							array(
 								'theme_location' => 'tertiary-menu',
-								'menu_class'     => 'tertiary-menu',
 								'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 								'depth'          => 1,
 							)
@@ -105,7 +104,7 @@
 			</div><!-- .wrapper -->
 		</div><!-- .middle-header-contain -->
 
-		<div class="bottom-header-contain">
+		<div class="bottom-header-contain desktop-navigation">
 			<div class="wrapper">
 				<?php if ( has_nav_menu( 'primary-menu' ) ) : ?>
 					<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'newspack' ); ?>">
